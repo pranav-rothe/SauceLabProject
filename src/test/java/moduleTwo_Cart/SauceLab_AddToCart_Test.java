@@ -8,6 +8,8 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import libraryClass.TestBase;
@@ -24,9 +26,10 @@ public class SauceLab_AddToCart_Test extends TestBase {
 	SauceLab_Home_Page home;
 	SauceLab_YourCart_Page cart;
 
+	@Parameters("browser")
 	@BeforeClass
-	public void openBrrowser() throws IOException {
-		openBrowser();
+	public void openBrrowser(@Optional("Chrome") String browser) throws IOException {
+		openBrowser(browser);
 		login=new SauceLabLoginPage(driver);
 		menu=new SauceLab_Menu_Page(driver);
 		home=new SauceLab_Home_Page(driver);	
