@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+   <test  name="chrome">
+  <parameter name="browser" value="chrome"></parameter>
+    <classes>
+      <class name="moduleOne_Login.SauceLab_Login_Test"/>
+    </classes>
+  </test> 
+   <test  name="edge">
+  <parameter name="browser" value="edge"></parameter>
+    <classes>
+      <class name="moduleOne_Login.SauceLab_Login_Test"/>
+    </classes>
+  </test> 
+   <test  name="firefox">
+  <parameter name="browser" value="firefox"></parameter>
+    <classes>
+      <class name="moduleOne_Login.SauceLab_Login_Test"/>
+    </classes>
+  </test> 
+</suite> <!-- Suite -->
